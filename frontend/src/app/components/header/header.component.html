@@ -1,0 +1,22 @@
+<header class="navbar-header">
+  <div class="navbar-container">
+
+    <a href="#top" class="navbar-logo">
+      <img [src]="logo" alt="Reach Sky">
+    </a>
+
+    <nav class="navbar-nav">
+      <a
+        *ngFor="let link of links"
+        [href]="link.href"
+        class="nav-link">
+        {{ link.label }}
+      </a>
+    </nav>
+
+    <a href="#lead" class="enroll-btn">
+      Enroll Now
+    </a>
+
+  </div>
+</header>

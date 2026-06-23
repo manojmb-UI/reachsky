@@ -1,0 +1,111 @@
+<section id="lead" #leadSection class="lead-section">
+
+  <div class="container">
+
+    <div class="lead-panel">
+
+      <!-- Left Panel -->
+
+      <div class="left-panel">
+
+        <p class="tag">
+          Free Counselling
+        </p>
+
+        <h2>
+          Talk to a career counsellor — free, no commitment.
+        </h2>
+
+        <p class="description">
+          Get a personalised roadmap based on your background,
+          goals and timeline.
+        </p>
+
+        <ul>
+          <li>Curriculum walkthrough</li>
+          <li>Fee & EMI options</li>
+          <li>Placement guidance</li>
+          <li>Scholarship eligibility</li>
+        </ul>
+
+      </div>
+
+      <!-- Right Panel -->
+
+      <form [formGroup]="leadForm" (ngSubmit)="onSubmit()" class="form-panel">
+
+        <div class="lead-field row">
+
+          <div>
+            <label>Full Name</label>
+
+            <input type="text" formControlName="name" placeholder="Riya Sharma">
+
+            <small *ngIf="f['name'].touched && f['name'].invalid">
+              Enter valid name
+            </small>
+          </div>
+
+          <div>
+            <label>Phone</label>
+
+            <input type="text" formControlName="phone_number" placeholder="+91 98xxxxxxxx">
+
+            <small *ngIf="f['phone_number']?.touched && f['phone_number']?.invalid">
+              Enter valid phone number
+            </small>
+          </div>
+
+        </div>
+
+        <div class="lead-field">
+
+          <label>Email</label>
+
+          <input type="email" formControlName="email" placeholder="you@email.com">
+
+          <small *ngIf="f['email'].touched && f['email'].invalid">
+            Enter valid email
+          </small>
+
+        </div>
+
+        <div class="lead-field">
+
+          <label>Interested Program</label>
+
+          <select formControlName="course">
+            <option value="">Choose a Program</option>
+            <option *ngFor="let course of courses" [ngValue]="course">
+              {{ course }}
+            </option>
+          </select>
+
+        </div>
+
+        <div class="lead-field">
+
+          <label>Anything we should know?</label>
+
+          <textarea rows="4" formControlName="message" placeholder="Your background, timeline, questions...">
+          </textarea>
+
+        </div>
+
+        <button type="submit" [disabled]="submitting">
+
+          {{ submitting ? 'Sending...' : 'Request a Callback →' }}
+
+        </button>
+
+        <p class="footer-text">
+          By submitting, you agree to be contacted regarding our programs.
+        </p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>

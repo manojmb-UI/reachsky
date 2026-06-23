@@ -1,0 +1,60 @@
+<section
+  #heroSection
+  id="top"
+  class="hero-section">
+
+  <div
+    class="hero-bg"
+    [style.background-image]="'url(' + heroBg + ')'">
+  </div>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-container">
+
+    <p class="hero-eyebrow">
+      <span class="pulse-dot"></span>
+      Best Digital Marketing Academy
+    </p>
+
+    <h1 class="hero-title">
+      <span>Reach the sky</span>
+      <span class="d-flex">
+        with
+        <span class="gradient-text ps-3">
+          data-driven
+        </span>
+      </span>
+      <span>marketing skills.</span>
+    </h1>
+
+    <p class="hero-sub">
+      A 16-week immersive program covering SEO,
+      performance ads, content, analytics and AI
+      tools — built with industry mentors and a
+      guaranteed placement track.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#lead" class="btn-primary">
+        Book a Free Counselling →
+      </a>
+
+      <a href="#programs" class="btn-outline">
+        Explore Curriculum
+      </a>
+    </div>
+
+    <div class="stats-grid">
+      <div
+        *ngFor="let stat of stats"
+        class="hero-stat">
+
+        <h3>{{ stat.value }}</h3>
+        <p>{{ stat.label }}</p>
+
+      </div>
+    </div>
+
+  </div>
+</section>
