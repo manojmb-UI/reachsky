@@ -6,7 +6,7 @@ import os
 load_dotenv()
 
 DATABASE_URL = (
-    f"mysql+pymysql://{os.getenv('DB_USER')}:"
+    f"mysql://root:KKjVQigeAivtYMNdWYwrKgBXduVfguYk@reseau.proxy.rlwy.net:33443/railway"
     f"{os.getenv('DB_PASSWORD')}@"
     f"{os.getenv('DB_HOST')}:"
     f"{os.getenv('DB_PORT')}/"
