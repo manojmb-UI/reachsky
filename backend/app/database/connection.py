@@ -6,11 +6,7 @@ import os
 load_dotenv()
 
 DATABASE_URL = (
-    f"mysql://root:KKjVQigeAivtYMNdWYwrKgBXduVfguYk@reseau.proxy.rlwy.net:33443/railway"
-    f"{os.getenv('DB_PASSWORD')}@"
-    f"{os.getenv('DB_HOST')}:"
-    f"{os.getenv('DB_PORT')}/"
-    f"{os.getenv('DB_NAME')}"
+   "mysql://root:KKjVQigeAivtYMNdWYwrKgBXduVfguYk@reseau.proxy.rlwy.net:33443/railway"
 )
 
 engine = create_engine(DATABASE_URL)
