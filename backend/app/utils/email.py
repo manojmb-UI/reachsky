@@ -33,5 +33,14 @@ async def send_lead_email(lead):
         subtype="html"
     )
 
-    fm = FastMail(conf)
-    await fm.send_message(message)
+
+    # fm = FastMail(conf)
+    # await fm.send_message(message)
+
+    try:
+        fm = FastMail(conf)
+        await fm.send_message(message)
+        print("Email sent successfully")
+    except Exception as e:
+        print("Email Error:", str(e))
+        raise e
