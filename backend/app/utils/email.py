@@ -4,6 +4,10 @@ import os
 
 load_dotenv()
 
+print("MAIL_PORT =", os.getenv("MAIL_PORT"))
+print("MAIL_STARTTLS =", os.getenv("MAIL_STARTTLS"))
+print("MAIL_SSL_TLS =", os.getenv("MAIL_SSL_TLS"))
+
 conf = ConnectionConfig(
     MAIL_USERNAME=os.getenv("MAIL_USERNAME"),
     MAIL_PASSWORD=os.getenv("MAIL_PASSWORD"),
