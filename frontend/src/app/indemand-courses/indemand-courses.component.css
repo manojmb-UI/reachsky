@@ -1,0 +1,134 @@
+.indemand-section {
+  padding: 7rem 0;
+  background: #f8f9fa;
+}
+
+.indemand-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.section-label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #f5b301;
+}
+
+.section-title {
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  max-width: 700px;
+}
+
+.section-title span {
+  color: #081a3d;
+}
+
+.section-description {
+  max-width: 450px;
+  color: #6c757d;
+}
+
+.indemand-card {
+  position: relative;
+  height: 100%;
+  padding: 1.75rem;
+  border-radius: 24px;
+  background: #fff;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.indemand-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.trending-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #f5b301;
+  color: #081a3d;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+.level {
+  color: #081a3d;
+  font-weight: 600;
+}
+
+.course-title {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.course-description {
+  margin-top: 0.8rem;
+  color: #6c757d;
+  line-height: 1.7;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 1.25rem;
+}
+
+.skill-chip {
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(245, 179, 1, 0.15);
+  color: #081a3d;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+.enroll-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.25rem;
+  width: 100%;
+  padding: 12px;
+  border-radius: 50px;
+  background: #081a3d;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.enroll-btn:hover {
+  background: #0d285e;
+}

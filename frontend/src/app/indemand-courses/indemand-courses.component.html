@@ -1,0 +1,82 @@
+<section
+  id="indemand"
+  #rootSection
+  class="indemand-section"
+>
+  <div class="container">
+
+    <div class="indemand-head">
+      <div>
+        <p class="section-label">
+          In-Demand Courses
+        </p>
+
+        <h2 class="section-title">
+          Skills <span>hiring managers</span>
+          are paying premium for in 2026.
+        </h2>
+      </div>
+
+      <p class="section-description">
+        Short, focused micro-courses you can stack into a complete career track —
+        or take standalone to level up fast.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <div
+        class="col-md-6 col-lg-4"
+        *ngFor="let course of courses"
+      >
+        <article class="indemand-card">
+
+          <span
+            *ngIf="course.hot"
+            class="trending-badge"
+          >
+            🔥 Trending
+          </span>
+
+          <div class="card-top">
+            <span class="level">
+              {{ course.level }}
+            </span>
+
+            <span>
+              ★ {{ course.rating }}
+            </span>
+          </div>
+
+          <h3 class="course-title">
+            {{ course.title }}
+          </h3>
+
+          <p class="course-description">
+            {{ course.desc }}
+          </p>
+
+          <div class="skills">
+            <span
+              *ngFor="let skill of course.skills"
+              class="skill-chip"
+            >
+              {{ skill }}
+            </span>
+          </div>
+
+          <div class="card-footer">
+            <span>{{ course.hours }}</span>
+            <span>{{ course.learners }} enrolled</span>
+          </div>
+
+          <a (click)="enroll(course.slug)" class="enroll-btn">
+            Enroll Now →
+          </a>
+
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>

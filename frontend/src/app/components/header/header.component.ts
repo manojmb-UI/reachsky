@@ -14,7 +14,7 @@ export class HeaderComponent {
   links = [
     { label: 'Home', href: '#top' },
     { label: 'About', href: '#about' },
-    { label: 'Courses', href: '#courses' },
+    { label: 'Courses', href: '#indemand' },
     // { label: 'Enroll', href: '#stories' }
   ];
 }

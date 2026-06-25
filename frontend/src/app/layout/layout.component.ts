@@ -5,10 +5,13 @@ import { HeaderComponent } from '../components/header/header.component';
 import { HomeComponent } from '../components/home/home.component';
 import { LeadFormComponent } from '../components/leadform/leadform.component';
 import { FooterComponent } from '../components/footer/footer.component';
+import { IndemandCoursesComponent } from '../indemand-courses/indemand-courses.component';
+import { HomeLayoutComponent } from '../home-layout/home-layout.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
-  imports: [CommonModule, HeaderComponent, HomeComponent, LeadFormComponent, FooterComponent],
+  imports: [CommonModule, HeaderComponent, HomeComponent, LeadFormComponent, FooterComponent, IndemandCoursesComponent, HomeLayoutComponent, RouterOutlet],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.css'
 })

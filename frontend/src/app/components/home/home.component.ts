@@ -20,7 +20,7 @@ export class HomeComponent implements AfterViewInit {
   @ViewChild('heroSection', { static: true })
   heroSection!: ElementRef;
 
-  heroBg = 'assets/hero-bg.jpg';
+  heroBg = 'assets/images/hero-bg.jpg';
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 

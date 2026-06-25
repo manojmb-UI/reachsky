@@ -1,0 +1,28 @@
+<section id="enroll">
+
+    <div class="enroll-card">
+
+        <h2>
+            Enroll in {{ course.title }}
+        </h2>
+
+        <form [formGroup]="form" (ngSubmit)="submit()">
+
+            <input type="text" formControlName="name" placeholder="Full Name">
+
+            <input type="email" formControlName="email" placeholder="Email">
+
+            <input type="text" formControlName="phone_number" placeholder="Phone">
+
+
+            <textarea formControlName="message" rows="4" placeholder="Anything we should know?"></textarea>
+
+            <button type="submit" [disabled]="form.invalid">
+                Reserve Seat
+            </button>
+
+        </form>
+
+    </div>
+
+</section>

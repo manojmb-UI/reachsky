@@ -15,4 +15,8 @@ export class CommonService {
   postLeadForm(data: any): Observable<any> {
     return this.http.post('https://reachsky.onrender.com/leads', data);
   }
+
+  getAllUsers(): Observable<any> {
+    return this.http.get('https://reachsky.onrender.com/leads');
+  }
 }

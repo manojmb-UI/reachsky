@@ -1,0 +1,112 @@
+<main #root>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="course-hero">
+
+      <div class="back-to-home mb-4" (click)="navigateToHome()">
+        <span class="arrow-left me-2"></span>
+        Back to Home
+      </div>
+
+      <div class="badges">
+        <span class="badge">
+          {{ course.level }}
+        </span>
+
+        <span class="badge">
+          {{ course.hours }}
+        </span>
+
+        <span class="badge">
+          ★ {{ course.rating }}
+        </span>
+
+        <span class="badge hot" *ngIf="course.hot">
+          🔥 Trending
+        </span>
+      </div>
+
+      <h1>
+        {{ course.title }}
+      </h1>
+
+      <p>
+        {{ course.tagline }}
+      </p>
+
+      <div class="skills">
+        <span
+          class="skill"
+          *ngFor="let skill of course.skills">
+          {{ skill }}
+        </span>
+      </div>
+
+      <div class="mt-5">
+        <button
+          class="btn btn-download-brochure"
+          (click)="downloadBrochure()">
+          Download Brochure
+        </button>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- OUTCOMES -->
+  <section class="course-outcomes">
+
+    <h2>
+      What You'll Achieve
+    </h2>
+
+    <div class="grid">
+
+      <div
+        class="course-outcome"
+        *ngFor="let item of course.outcomes">
+
+        {{ item }}
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MODULES -->
+  <section class="course-modules">
+
+    <h2>
+      Curriculum
+    </h2>
+
+    <details
+      class="course-module"
+      *ngFor="let module of course.modules">
+
+      <summary class="d-flex justify-content-between align-items-center">
+        <span>{{ module.title }}</span>
+        <span class="toggle"></span>
+      </summary>
+
+      <ul>
+        <li *ngFor="let topic of module.topics">
+          {{ topic }}
+        </li>
+      </ul>
+
+    </details>
+
+  </section>
+
+  <!-- ENROLL FORM -->
+  <app-enroll-form
+    [course]="course"
+    ngSkipHydration>
+  </app-enroll-form>
+
+</main>

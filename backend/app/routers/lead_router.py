@@ -75,3 +75,12 @@ async def create_lead(lead: LeadCreate):
         "message": "Lead created successfully",
         "id": new_lead.id
     }
+
+@router.get("/leads")
+def get_leads():
+    db = SessionLocal()
+
+    leads = db.query(Lead).all()
+
+    return leads    
+
