@@ -10,7 +10,7 @@ resend.api_key = os.getenv("RESEND_API_KEY")
 async def send_lead_email(lead):
     params = {
         "from": os.getenv("MAIL_FROM"),
-        "to": ["pottervishnu3@gmail.com"],
+        "to": ["manobala258@gmail.com"],
         "subject": "New Lead Received",
         "html": f"""
         <h2>New Lead Received</h2>
