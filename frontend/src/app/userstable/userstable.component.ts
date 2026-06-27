@@ -11,13 +11,14 @@ import { CommonService } from '../shared/common.service';
 
 })
 export class UsersComponent {
+  copy_icon = 'assets/images/icons8-copy-24.png';
   constructor(private commomservice: CommonService) { }
   users: any[] = [];
   filters = {
     id: '',
     name: '',
     email: '',
-    city: ''
+    phone_number: ''
   };
 
   currentPage = 1;
@@ -31,7 +32,7 @@ export class UsersComponent {
       user.id.toString().includes(this.filters.id) &&
       user.name.toLowerCase().includes(this.filters.name.toLowerCase()) &&
       user.email.toLowerCase().includes(this.filters.email.toLowerCase()) &&
-      user.city.toLowerCase().includes(this.filters.city.toLowerCase())
+      user.phone_number.toLowerCase().includes(this.filters.phone_number.toLowerCase())
     );
   }
 
@@ -49,6 +50,16 @@ export class UsersComponent {
       this.currentPage = page;
     }
   }
+  copyPhoneNumber(phone: string): void {
+  navigator.clipboard.writeText(phone).then(() => {
+    console.log('Copied:', phone);
+
+    // Optional
+    // this.toastr.success('Phone number copied');
+  }).catch(err => {
+    console.error('Copy failed', err);
+  });
+}
 
   get pages() {
     return Array.from(

@@ -1,22 +1,36 @@
-<header class="navbar-header">
-  <div class="navbar-container">
+<nav class="navbar navbar-expand-lg navbar-header">
+  <div class="container navbar-container">
 
-    <a href="#top" class="navbar-logo">
+    <!-- Logo -->
+    <a class="navbar-brand navbar-logo p-0" href="#top">
       <img [src]="logo" alt="Reach Sky">
     </a>
 
-    <nav class="navbar-nav">
-      <a
-        *ngFor="let link of links"
-        [href]="link.href"
-        class="nav-link">
-        {{ link.label }}
-      </a>
-    </nav>
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
 
-    <a href="#lead" class="enroll-btn">
-      Enroll Now
-    </a>
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+    <!-- Navbar -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item" *ngFor="let link of links">
+          <a class="nav-link" [href]="link.href">
+            {{ link.label }}
+          </a>
+        </li>
+      </ul>
+      <div class="enroll_row">
+        <a href="#lead" class="enroll-btn">
+          Enroll Now
+        </a>
+      </div>
+
+    </div>
 
   </div>
-</header>
+</nav>

@@ -1,118 +1,100 @@
 <section class="py-5">
-    <div class="container pt-5">
-<div class="table-responsive">
+  <div class="container pt-5">
+    <div class="table-responsive">
 
-  <table class="table table-bordered table-striped">
+      <table class="table table-bordered table-striped">
 
-    <thead>
+        <thead>
 
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>City</th>
-      </tr>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+          </tr>
 
-      <tr>
-        <th>
-          <input
-            type="text"
-            class="form-control"
-            [(ngModel)]="filters.id"
-            (ngModelChange)="onFilterChange()">
-        </th>
+          <tr>
+            <th>
+              <input type="text" class="form-control" [(ngModel)]="filters.id" (ngModelChange)="onFilterChange()">
+            </th>
 
-        <th>
-          <input
-            type="text"
-            class="form-control"
-            [(ngModel)]="filters.name"
-            (ngModelChange)="onFilterChange()">
-        </th>
+            <th>
+              <input type="text" class="form-control" [(ngModel)]="filters.name" (ngModelChange)="onFilterChange()">
+            </th>
 
-        <th>
-          <input
-            type="text"
-            class="form-control"
-            [(ngModel)]="filters.email"
-            (ngModelChange)="onFilterChange()">
-        </th>
+            <th>
+              <input type="text" class="form-control" [(ngModel)]="filters.email" (ngModelChange)="onFilterChange()">
+            </th>
 
-        <th>
-          <input
-            type="text"
-            class="form-control"
-            [(ngModel)]="filters.city"
-            (ngModelChange)="onFilterChange()">
-        </th>
-      </tr>
+            <th>
+              <input type="text" class="form-control" [(ngModel)]="filters.phone_number"
+                (ngModelChange)="onFilterChange()">
+            </th>
+          </tr>
 
-    </thead>
+        </thead>
 
-    <tbody>
+        <tbody>
 
-      <tr *ngFor="let user of paginatedUsers">
-        <td>{{ user.id }}</td>
-        <td>{{ user.name }}</td>
-        <td>{{ user.email }}</td>
-        <td>{{ user.city }}</td>
-      </tr>
+          <tr *ngFor="let user of paginatedUsers">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+              <div class="d-flex align-items-center justify-content-between gap-2">
+                <span>{{ user.phone_number }}</span>
 
-      <tr *ngIf="paginatedUsers.length === 0">
-        <td colspan="4" class="text-center">
-          No Records Found
-        </td>
-      </tr>
+                <button type="button" class="copy-btn" (click)="copyPhoneNumber(user.phone_number)"
+                  title="Copy Phone Number">
+                 <img [src]="copy_icon" alt="copy_icon">
+                </button>
+              </div>
+            </td>
 
-    </tbody>
+          </tr>
 
-  </table>
+          <tr *ngIf="paginatedUsers.length === 0">
+            <td colspan="4" class="text-center">
+              No Records Found
+            </td>
+          </tr>
 
-</div>
+        </tbody>
 
-<nav *ngIf="totalPages > 1">
+      </table>
 
-  <ul class="pagination justify-content-center">
-
-    <li
-      class="page-item"
-      [class.disabled]="currentPage === 1">
-
-      <button
-        class="page-link"
-        (click)="changePage(currentPage - 1)">
-        Previous
-      </button>
-
-    </li>
-
-    <li
-      *ngFor="let page of pages"
-      class="page-item"
-      [class.active]="page === currentPage">
-
-      <button
-        class="page-link"
-        (click)="changePage(page)">
-        {{ page }}
-      </button>
-
-    </li>
-
-    <li
-      class="page-item"
-      [class.disabled]="currentPage === totalPages">
-
-      <button
-        class="page-link"
-        (click)="changePage(currentPage + 1)">
-        Next
-      </button>
-
-    </li>
-
-  </ul>
-
-</nav>
     </div>
+
+    <nav *ngIf="totalPages > 1">
+
+      <ul class="pagination justify-content-center">
+
+        <li class="page-item" [class.disabled]="currentPage === 1">
+
+          <button class="page-link" (click)="changePage(currentPage - 1)">
+            Previous
+          </button>
+
+        </li>
+
+        <li *ngFor="let page of pages" class="page-item" [class.active]="page === currentPage">
+
+          <button class="page-link" (click)="changePage(page)">
+            {{ page }}
+          </button>
+
+        </li>
+
+        <li class="page-item" [class.disabled]="currentPage === totalPages">
+
+          <button class="page-link" (click)="changePage(currentPage + 1)">
+            Next
+          </button>
+
+        </li>
+
+      </ul>
+
+    </nav>
+  </div>
 </section>
