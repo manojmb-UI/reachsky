@@ -21,12 +21,12 @@ export class IndemandCoursesComponent implements AfterViewInit {
   rootSection!: ElementRef<HTMLElement>;
   constructor(private router: Router) { }
 
- courses = [
+courses = [
   {
     title: 'Digital Marketing Mastery',
     level: 'Beginner → Advanced',
     hours: '120 hrs',
-    learners: '25,000+',
+    learners: '40+',
     rating: '4.9',
     desc: 'Master SEO, Google Ads, Meta Ads, Social Media Marketing, Content Marketing, Email Marketing, Analytics, and AI-powered marketing strategies.',
     skills: [
@@ -37,6 +37,25 @@ export class IndemandCoursesComponent implements AfterViewInit {
     ],
     hot: true,
     slug: 'digital-marketing-mastery'
+  },
+  {
+    title: 'Full Stack Development',
+    level: 'Beginner → Advanced',
+    hours: '180 hrs',
+    learners: '50+',
+    rating: '4.9',
+    desc: 'Build complete web applications by mastering HTML, CSS, JavaScript, Python, Django, and MySQL through hands-on projects and real-world development.',
+    skills: [
+      'HTML',
+      'CSS',
+      'bootstrap',
+      'JavaScript',
+      'Python',
+      'Django',
+      'MySQL'
+    ],
+    hot: true,
+    slug: 'full-stack-development'
   }
 ];
 

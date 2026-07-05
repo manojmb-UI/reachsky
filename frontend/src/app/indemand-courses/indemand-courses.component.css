@@ -133,3 +133,14 @@
 .enroll-btn:hover {
   background: #0d285e;
 }
+@media (max-width:576px){
+  .indemand-section{
+    padding: 30px 15px;
+  }
+  .section-title{
+    font-size: 2rem;
+  }
+  .indemand-head{
+    margin-bottom: 2rem;
+  }
+}

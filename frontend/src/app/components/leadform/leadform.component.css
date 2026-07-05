@@ -107,3 +107,14 @@ label {
   }
 
 }
+@media (max-width:576px) {
+ .left-panel {
+    padding: 25px;
+ }
+ .form-panel{
+    padding: 25px;
+ }
+ .lead-section{
+    padding: 40px 20px;
+}
+}

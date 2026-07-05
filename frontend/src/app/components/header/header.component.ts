@@ -10,11 +10,16 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
     logo = 'assets/images/logo.png';
+    isMenuOpen = false;
 
   links = [
     { label: 'Home', href: '#top' },
-    { label: 'About', href: '#about' },
     { label: 'Courses', href: '#indemand' },
+    { label: 'Contact Us', href: '#footer' },
+
     // { label: 'Enroll', href: '#stories' }
   ];
+  toggleMenu() {
+  this.isMenuOpen = !this.isMenuOpen;
+}
 }

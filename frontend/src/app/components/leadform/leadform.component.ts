@@ -42,10 +42,9 @@ export class LeadFormComponent implements AfterViewInit {
 
   ngOnInit(): void {
     this.courses = [
-      'PG in Digital Marketing',
-      'Performance Marketing Pro',
-      'SEO & Content Strategy',
-      'Not sure — guide me'
+      'Digital Marketing',
+      'Full Stack Development',
+      'Data Analytics'
     ];
     this.leadForm = this.fb.group({
       name: [

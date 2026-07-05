@@ -6,6 +6,8 @@ import {
   AfterViewInit,
   Inject,
   PLATFORM_ID,
+  ViewChildren,
+  QueryList,
 } from '@angular/core';
 import { gsap } from 'gsap';
 
@@ -68,7 +70,7 @@ export class HomeComponent implements AfterViewInit {
 
   stats = [
     {
-      value: '12,000+',
+      value: '100+',
       label: 'Learners trained'
     },
     {
@@ -76,12 +78,13 @@ export class HomeComponent implements AfterViewInit {
       label: 'Placement rate'
     },
     {
-      value: '₹8.4 LPA',
+      value: '₹4 LPA',
       label: 'Average CTC'
     },
     {
-      value: '350+',
+      value: '50+',
       label: 'Hiring partners'
     }
   ];
+
 }

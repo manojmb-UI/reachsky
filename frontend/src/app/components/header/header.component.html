@@ -8,14 +8,18 @@
 
     <!-- Mobile Toggle -->
     <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-      data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      data-bs-target="#mainNavbar" (click)="toggleMenu()" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
 
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon-custom"  [class.active]="isMenuOpen">
+        <span class="line line1"></span>
+        <span class="line line2"></span>  
+        <span class="line line3"></span>
+      </span>
 
     </button>
 
     <!-- Navbar -->
-    <div class="collapse navbar-collapse" id="mainNavbar">
+    <div class="collapse navbar-collapse" id="mainNavbar" >
 
       <ul class="navbar-nav mx-auto">
         <li class="nav-item" *ngFor="let link of links">
@@ -31,6 +35,7 @@
       </div>
 
     </div>
+
 
   </div>
 </nav>

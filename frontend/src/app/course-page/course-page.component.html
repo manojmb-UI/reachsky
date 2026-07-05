@@ -57,25 +57,44 @@
   </section>
 
   <!-- OUTCOMES -->
-  <section class="course-outcomes">
+<section class="course-outcomes">
 
-    <h2>
-      What You'll Achieve
-    </h2>
+    <div class="section-heading">
 
-    <div class="grid">
+        <span class="tag">
+            Career Outcomes
+        </span>
 
-      <div
-        class="course-outcome"
-        *ngFor="let item of course.outcomes">
+        <h2>
+            What You'll Achieve
+        </h2>
 
-        {{ item }}
-
-      </div>
+        <p>
+            Gain practical skills that prepare you for real-world projects,
+            interviews, and high-paying career opportunities.
+        </p>
 
     </div>
 
-  </section>
+    <div class="grid">
+
+        <div
+            class="course-outcome"
+            *ngFor="let item of course.outcomes">
+
+            <div class="icon">
+                ✓
+            </div>
+
+            <div class="text">
+                {{ item }}
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
   <!-- MODULES -->
   <section class="course-modules">

@@ -61,16 +61,16 @@ export class EnrollFormComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
 
-    gsap.from('.enroll-card', {
-      y: 60,
-      opacity: 0,
-      duration: .8,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: '.enroll-card',
-        start: 'top 75%'
-      }
-    });
+    // gsap.from('.enroll-card', {
+    //   y: 60,
+    //   opacity: 0,
+    //   duration: .8,
+    //   ease: 'power3.out',
+    //   scrollTrigger: {
+    //     trigger: '.enroll-card',
+    //     start: 'top 50%'
+    //   }
+    // });
   }
 
   submit(): void {
