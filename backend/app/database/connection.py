@@ -5,13 +5,15 @@ import os
 
 load_dotenv()
 
-DATABASE_URL = "mysql+pymysql://root:KKjVQigeAivtYMNdWYwrKgBXduVfguYk@reseau.proxy.rlwy.net:33443/railway"
+DATABASE_URL = os.getenv("DATABASE_URL")
 
-engine = create_engine(DATABASE_URL)
-
-
-SessionLocal = sessionmaker(
-    autocommit=False,
-    autoflush=False,
-    bind=engine
-)
+if DATABASE_URL:
+    engine = create_engine(DATABASE_URL)
+    SessionLocal = sessionmaker(
+        autocommit=False,
+        autoflush=False,
+        bind=engine
+    )
+else:
+    engine = None
+    SessionLocal = None
