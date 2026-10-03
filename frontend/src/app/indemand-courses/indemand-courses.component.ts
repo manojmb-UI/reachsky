@@ -56,6 +56,24 @@ courses = [
     ],
     hot: true,
     slug: 'full-stack-development'
+  },
+    {
+    title: 'Data Analyst',
+    level: 'Beginner → Advanced',
+    hours: '150 hrs',
+    learners: '40+',
+    rating: '4.9',
+    desc: 'Master Excel, SQL, Python, Power BI, data visualization, statistics, and real-world analytics through hands-on projects and practical business use cases.',
+    skills: [
+      'Excel',
+      'SQL',
+      'Python',
+      'Power BI',
+      'Data Visualization',
+      'Statistics'
+    ],
+    hot: true,
+    slug: 'data-analyst'
   }
 ];
 
